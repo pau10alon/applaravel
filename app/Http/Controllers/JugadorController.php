@@ -114,7 +114,7 @@ class JugadorController extends Controller
             $mensaje=['Foto.required'=>'La foto es requerida'];
         }
 
-
+        $this->validate($request,$campos,$mensaje);    
 
         $datosJugador = request()->except(['_token','_method']);
         if ($request->hasFile("Foto")){

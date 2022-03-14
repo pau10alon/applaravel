@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Auth;
 
 
 Route::resource('jugador', JugadorController::class)->middleware('auth');
-Auth::routes(['register'=>false,'reset'=>false]);
+Auth::routes(['register'=>true,'reset'=>false]);
 
 Route::get('/home', [JugadorController::class, 'index'])->name('home');
 
